@@ -1,0 +1,123 @@
+<!-- Save this as index.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #F765A3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F765A3;
+            color: White;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .content {
+            background-color: pink;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            background-color: pink;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .contact {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+ .contact button[type="submit"] {
+            background-color:darkpink; /* 
+}
+
+        footer {
+            background-color: #F765A3;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+    <title>Fictional Product</title>
+</head>
+<body>
+    <header>
+        <h1>Fictional Product</h1>
+        <p>Experience the best in Fiction...</p>
+    </header>
+    
+    <section class="content">
+        <p>Welcome to our world of Fictional Products...</p>
+    </section>
+    
+    <section class="product-listing">
+        <h2>Featured Products</h2>
+        
+        <div class="products-container">
+            <div class="product">
+                <img src="pexels-saliha-sevim-8239819.jpg" alt="Product 1" width="200" height="150">
+                <h3>To Kill a Mockingbird</h3>
+                <p>To Kill a Mockingbird is a novel by the American author Harper Lee. It was published in 1960 and was instantly successful. In the United States, it is widely read in high schools and middle schools.</p>
+            </div>
+            
+            <div class="product">
+                <img src="pexels-karolina-grabowska-4218864.jpg" alt="Product 2" width="200" height="150">
+                <h3>Beloved</h3>
+                <p>Beloved is a 1987 novel by American novelist Toni Morrison. Set in the period after the American Civil War, the novel tells the story of a dysfunctional family of formerly enslaved people whose Cincinnati home is haunted by a malevolent spirit.</p>
+            </div>
+            
+            <div class="product">
+                <img src="pexels-george-milton-7034646.jpg" alt="Product 3" width="200" height="150">
+                <h3>Wuthering Heights</h3>
+                <p>Wuthering Heights is an 1847 novel by Emily Brontë, initially published under her pen name "Ellis Bell". It concerns two families of the landed gentry living on the West Yorkshire moors, the Earnshaws and the Lintons, and their turbulent relationships with the Earnshaws' foster son, Heathcliff.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <h2>Contact Us</h2><br>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            $name = $_POST["name"];
+            $email = $_POST["email"];
+            $message = $_POST["message"];
+            
+            // You can add further validation and processing here
+            
+        }
+        ?>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Fictional Company. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
